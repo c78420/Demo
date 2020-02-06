@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CTLivePlayerControls" customModule="newchinatimes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="259"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Q8p-Ie-gR2">
+                    <rect key="frame" x="169" y="111" width="37" height="37"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nw7-MT-IA3" customClass="CTStatefulButton" customModule="newchinatimes" customModuleProvider="target">
+                    <rect key="frame" x="10" y="219" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="JJA-jp-G4h"/>
+                        <constraint firstAttribute="width" constant="35" id="TAF-L3-NWj"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="activeImage" value="CT_pause_s"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="inactiveImage" value="CT_play_s"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBX-6j-xBZ" customClass="CTStatefulButton" customModule="newchinatimes" customModuleProvider="target">
+                    <rect key="frame" x="55" y="219" width="35" height="35"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="activeImage" value="CT_sound-off"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="inactiveImage" value="CT_sound-on"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZz-Dn-HYR" customClass="CTStatefulButton" customModule="newchinatimes" customModuleProvider="target">
+                    <rect key="frame" x="330" y="219" width="35" height="35"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="activeImage" value="CT_fullscreen_disable"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="inactiveImage" value="CT_fullscreen"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsf-nK-b2w">
+                    <rect key="frame" x="15" y="20" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jd5-AG-aGB">
+                    <rect key="frame" x="292" y="227.5" width="28" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="r4p-XL-ScX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CT_playhead" translatesAutoresizingMaskIntoConstraints="NO" id="GYo-IF-abT">
+                    <rect key="frame" x="274" y="227.5" width="18" height="18"/>
+                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="GYo-IF-abT" secondAttribute="height" multiplier="1:1" id="8iY-mf-zdb"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="GYo-IF-abT" firstAttribute="height" secondItem="jd5-AG-aGB" secondAttribute="height" id="1Yo-08-VhW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rZz-Dn-HYR" secondAttribute="trailing" constant="10" id="2fu-gh-DSK"/>
+                <constraint firstItem="Q8p-Ie-gR2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6DK-MH-CEX"/>
+                <constraint firstItem="rZz-Dn-HYR" firstAttribute="height" secondItem="Nw7-MT-IA3" secondAttribute="height" id="BeN-AT-BNo"/>
+                <constraint firstItem="rZz-Dn-HYR" firstAttribute="centerY" secondItem="Nw7-MT-IA3" secondAttribute="centerY" id="E3i-az-SIR"/>
+                <constraint firstItem="rZz-Dn-HYR" firstAttribute="width" secondItem="Nw7-MT-IA3" secondAttribute="width" id="Nah-3H-IEd"/>
+                <constraint firstItem="jd5-AG-aGB" firstAttribute="centerY" secondItem="Nw7-MT-IA3" secondAttribute="centerY" id="PMa-44-8AR"/>
+                <constraint firstItem="Q8p-Ie-gR2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Q67-oG-Mrn"/>
+                <constraint firstItem="vsf-nK-b2w" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Qed-eM-anB"/>
+                <constraint firstItem="XBX-6j-xBZ" firstAttribute="height" secondItem="Nw7-MT-IA3" secondAttribute="height" id="VtQ-EV-VS5"/>
+                <constraint firstItem="Nw7-MT-IA3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="ZsX-NC-rod"/>
+                <constraint firstItem="jd5-AG-aGB" firstAttribute="leading" secondItem="GYo-IF-abT" secondAttribute="trailing" id="je0-c5-zF2"/>
+                <constraint firstItem="vsf-nK-b2w" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="kzS-aI-7PM"/>
+                <constraint firstItem="GYo-IF-abT" firstAttribute="centerY" secondItem="Nw7-MT-IA3" secondAttribute="centerY" id="lDS-DJ-TLL"/>
+                <constraint firstItem="XBX-6j-xBZ" firstAttribute="width" secondItem="Nw7-MT-IA3" secondAttribute="width" id="ps2-Cc-jz3"/>
+                <constraint firstItem="XBX-6j-xBZ" firstAttribute="centerY" secondItem="Nw7-MT-IA3" secondAttribute="centerY" id="rF3-Kj-UNF"/>
+                <constraint firstItem="XBX-6j-xBZ" firstAttribute="leading" secondItem="Nw7-MT-IA3" secondAttribute="trailing" constant="10" id="tNx-OT-cnq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Nw7-MT-IA3" secondAttribute="bottom" constant="5" id="whJ-kW-Tgd"/>
+                <constraint firstItem="rZz-Dn-HYR" firstAttribute="leading" secondItem="jd5-AG-aGB" secondAttribute="trailing" constant="10" id="zd0-Bt-PKp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bufferingView" destination="Q8p-Ie-gR2" id="iQT-Fk-Gbc"/>
+                <outlet property="fullscreenButton" destination="rZz-Dn-HYR" id="gK8-3R-Qbz"/>
+                <outlet property="liveStstus" destination="GYo-IF-abT" id="mYL-cZ-pEr"/>
+                <outlet property="muteButton" destination="XBX-6j-xBZ" id="2Sd-MI-jd6"/>
+                <outlet property="playPauseButton" destination="Nw7-MT-IA3" id="w5I-fd-K6N"/>
+                <outlet property="titleLabel" destination="vsf-nK-b2w" id="6IS-lo-oKi"/>
+            </connections>
+            <point key="canvasLocation" x="40.799999999999997" y="46.326836581709152"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CT_fullscreen" width="36" height="36"/>
+        <image name="CT_fullscreen_disable" width="36" height="36"/>
+        <image name="CT_pause_s" width="36" height="36"/>
+        <image name="CT_play_s" width="36" height="36"/>
+        <image name="CT_playhead" width="48" height="48"/>
+        <image name="CT_sound-off" width="36" height="36"/>
+        <image name="CT_sound-on" width="36" height="36"/>
+    </resources>
+</document>

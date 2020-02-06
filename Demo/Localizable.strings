@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Demo
+
+  Created by 黃崇漢 on 2018/12/27.
+  Copyright © 2018 Tony Huang (黃崇漢). All rights reserved.
+*/
+
+"title" = "localize_title";

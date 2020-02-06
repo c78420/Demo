@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CTPlayerControls" customModule="newchinatimes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="259"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kr0-Xg-1RG">
+                    <rect key="frame" x="169" y="111" width="37" height="37"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3t-M2-kro" customClass="CTTimeLabel" customModule="newchinatimes" customModuleProvider="target">
+                    <rect key="frame" x="45" y="223" width="50" height="12"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="xUV-eN-06V"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCo-1e-Z0Z" customClass="CTTimeLabel" customModule="newchinatimes" customModuleProvider="target">
+                    <rect key="frame" x="280" y="223" width="50" height="12"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="4j2-5S-mdd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8g4-qb-8Op" customClass="CTStatefulButton" customModule="newchinatimes" customModuleProvider="target">
+                    <rect key="frame" x="335" y="214" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="4up-Jt-jPp"/>
+                        <constraint firstAttribute="height" constant="30" id="aDE-Dn-gxd"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="activeImage" value="CT_fullscreen_disable"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="inactiveImage" value="CT_fullscreen"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RnL-k7-BfN">
+                    <rect key="frame" x="100" y="229" width="175" height="2"/>
+                </progressView>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="rp4-6I-ziU" customClass="CTSeekbarSlider" customModule="newchinatimes" customModuleProvider="target">
+                    <rect key="frame" x="98" y="214" width="179" height="31"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="CT_playhead"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="thumbHighlightedImage" value="CT_playhead"/>
+                    </userDefinedRuntimeAttributes>
+                </slider>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0V-8W-MaB" customClass="CTStatefulButton" customModule="newchinatimes" customModuleProvider="target">
+                    <rect key="frame" x="162.5" y="144" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="HWD-BX-Wt9"/>
+                        <constraint firstAttribute="height" constant="50" id="bfx-9y-YUH"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="activeImage" value="CT_pause"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="inactiveImage" value="CT_play"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIq-fV-dbp" customClass="CTStatefulButton" customModule="newchinatimes" customModuleProvider="target">
+                    <rect key="frame" x="224.5" y="144" width="50" height="50"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="activeImage" value="CT_skipForward"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="inactiveImage" value="CT_skipForward"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEq-gu-BlN" customClass="CTStatefulButton" customModule="newchinatimes" customModuleProvider="target">
+                    <rect key="frame" x="38.5" y="144" width="50" height="50"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="activeImage" value="CT_rewind"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="inactiveImage" value="CT_rewind"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYL-Db-efm" customClass="CTStatefulButton" customModule="newchinatimes" customModuleProvider="target">
+                    <rect key="frame" x="286.5" y="144" width="50" height="50"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="activeImage" value="CT_fastforward"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="inactiveImage" value="CT_fastforward"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35o-71-s5f" customClass="CTStatefulButton" customModule="newchinatimes" customModuleProvider="target">
+                    <rect key="frame" x="100.5" y="144" width="50" height="50"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="activeImage" value="CT_skipBackward"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="inactiveImage" value="CT_skipBackward"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oG1-Wg-jgn" customClass="CTStatefulButton" customModule="newchinatimes" customModuleProvider="target">
+                    <rect key="frame" x="10" y="214" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="6JQ-8I-7Jk"/>
+                        <constraint firstAttribute="width" constant="30" id="rNZ-mn-fst"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="activeImage" value="CT_sound-off"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="inactiveImage" value="CT_sound-on"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zk3-x9-ugw">
+                    <rect key="frame" x="15" y="20" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="rp4-6I-ziU" firstAttribute="top" secondItem="w0V-8W-MaB" secondAttribute="bottom" constant="20" id="0Bz-Rp-AMZ"/>
+                <constraint firstItem="RIq-fV-dbp" firstAttribute="top" secondItem="w0V-8W-MaB" secondAttribute="top" id="560-12-4Zb"/>
+                <constraint firstItem="oG1-Wg-jgn" firstAttribute="centerY" secondItem="8g4-qb-8Op" secondAttribute="centerY" id="6Di-A9-fq6"/>
+                <constraint firstItem="HYL-Db-efm" firstAttribute="top" secondItem="w0V-8W-MaB" secondAttribute="top" id="6q9-Lb-ydY"/>
+                <constraint firstItem="RIq-fV-dbp" firstAttribute="bottom" secondItem="w0V-8W-MaB" secondAttribute="bottom" id="C5A-Oy-Q6l"/>
+                <constraint firstItem="35o-71-s5f" firstAttribute="bottom" secondItem="w0V-8W-MaB" secondAttribute="bottom" id="DaP-DV-o1H"/>
+                <constraint firstItem="RIq-fV-dbp" firstAttribute="leading" secondItem="w0V-8W-MaB" secondAttribute="trailing" constant="12" id="Dbv-hA-uBt"/>
+                <constraint firstItem="RIq-fV-dbp" firstAttribute="width" secondItem="w0V-8W-MaB" secondAttribute="width" id="EEt-Ot-1Jl"/>
+                <constraint firstItem="kr0-Xg-1RG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="EPG-HU-H8A"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8g4-qb-8Op" secondAttribute="bottom" constant="15" id="FbC-4Z-aIu"/>
+                <constraint firstItem="35o-71-s5f" firstAttribute="leading" secondItem="EEq-gu-BlN" secondAttribute="trailing" constant="12" id="GGh-F9-QOe"/>
+                <constraint firstItem="EEq-gu-BlN" firstAttribute="centerY" secondItem="w0V-8W-MaB" secondAttribute="centerY" id="HJM-a2-G9j"/>
+                <constraint firstItem="HYL-Db-efm" firstAttribute="width" secondItem="w0V-8W-MaB" secondAttribute="width" id="Pxd-HT-XZK"/>
+                <constraint firstItem="qCo-1e-Z0Z" firstAttribute="leading" secondItem="rp4-6I-ziU" secondAttribute="trailing" constant="5" id="Q3P-63-1em"/>
+                <constraint firstItem="35o-71-s5f" firstAttribute="width" secondItem="w0V-8W-MaB" secondAttribute="width" id="R1U-HM-ajl"/>
+                <constraint firstItem="rp4-6I-ziU" firstAttribute="centerY" secondItem="8g4-qb-8Op" secondAttribute="centerY" id="SAx-Gx-ffX"/>
+                <constraint firstItem="EEq-gu-BlN" firstAttribute="top" secondItem="w0V-8W-MaB" secondAttribute="top" id="Uwn-qC-mfV"/>
+                <constraint firstItem="Zk3-x9-ugw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="VCG-Wg-xv5"/>
+                <constraint firstItem="EEq-gu-BlN" firstAttribute="width" secondItem="w0V-8W-MaB" secondAttribute="width" id="Vjc-PV-bSO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8g4-qb-8Op" secondAttribute="trailing" constant="10" id="W9r-Nh-HEc"/>
+                <constraint firstItem="RnL-k7-BfN" firstAttribute="width" secondItem="rp4-6I-ziU" secondAttribute="width" id="Wnp-sN-w7H"/>
+                <constraint firstItem="Zk3-x9-ugw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="WuI-PK-Bil"/>
+                <constraint firstItem="RIq-fV-dbp" firstAttribute="centerY" secondItem="w0V-8W-MaB" secondAttribute="centerY" id="Z7V-XY-lez"/>
+                <constraint firstItem="EEq-gu-BlN" firstAttribute="bottom" secondItem="w0V-8W-MaB" secondAttribute="bottom" id="ZRp-qQ-5vL"/>
+                <constraint firstItem="8g4-qb-8Op" firstAttribute="leading" secondItem="qCo-1e-Z0Z" secondAttribute="trailing" constant="5" id="ZwA-B3-cFC"/>
+                <constraint firstItem="RnL-k7-BfN" firstAttribute="centerY" secondItem="rp4-6I-ziU" secondAttribute="centerY" constant="1" id="bGa-kp-DYU"/>
+                <constraint firstItem="35o-71-s5f" firstAttribute="top" secondItem="w0V-8W-MaB" secondAttribute="top" id="ean-uZ-HwD"/>
+                <constraint firstItem="35o-71-s5f" firstAttribute="centerY" secondItem="w0V-8W-MaB" secondAttribute="centerY" id="ipk-MK-0gk"/>
+                <constraint firstItem="HYL-Db-efm" firstAttribute="leading" secondItem="RIq-fV-dbp" secondAttribute="trailing" constant="12" id="lau-gY-9nN"/>
+                <constraint firstItem="w0V-8W-MaB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="leh-tc-nbc"/>
+                <constraint firstItem="oG1-Wg-jgn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="no6-bT-HA1"/>
+                <constraint firstItem="R3t-M2-kro" firstAttribute="centerY" secondItem="8g4-qb-8Op" secondAttribute="centerY" id="o3q-4C-0RL"/>
+                <constraint firstItem="rp4-6I-ziU" firstAttribute="leading" secondItem="R3t-M2-kro" secondAttribute="trailing" constant="5" id="pB3-AP-2Dc"/>
+                <constraint firstItem="HYL-Db-efm" firstAttribute="bottom" secondItem="w0V-8W-MaB" secondAttribute="bottom" id="rLv-oR-Ndd"/>
+                <constraint firstItem="R3t-M2-kro" firstAttribute="leading" secondItem="oG1-Wg-jgn" secondAttribute="trailing" constant="5" id="tjF-Rj-Kd0"/>
+                <constraint firstItem="RnL-k7-BfN" firstAttribute="centerX" secondItem="rp4-6I-ziU" secondAttribute="centerX" id="ufx-TP-02u"/>
+                <constraint firstItem="w0V-8W-MaB" firstAttribute="leading" secondItem="35o-71-s5f" secondAttribute="trailing" constant="12" id="uoa-i9-Ui8"/>
+                <constraint firstItem="kr0-Xg-1RG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="vNt-7d-26z"/>
+                <constraint firstItem="HYL-Db-efm" firstAttribute="centerY" secondItem="w0V-8W-MaB" secondAttribute="centerY" id="yNa-9u-sos"/>
+                <constraint firstItem="qCo-1e-Z0Z" firstAttribute="centerY" secondItem="8g4-qb-8Op" secondAttribute="centerY" id="zdK-dM-s6b"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bufferingView" destination="kr0-Xg-1RG" id="RNE-Dx-qkv"/>
+                <outlet property="currentTimeLabel" destination="R3t-M2-kro" id="D3W-xB-v8j"/>
+                <outlet property="forwardButton" destination="HYL-Db-efm" id="r24-WQ-xQH"/>
+                <outlet property="fullscreenButton" destination="8g4-qb-8Op" id="mXr-3h-hX5"/>
+                <outlet property="muteButton" destination="oG1-Wg-jgn" id="ZBl-7p-u0T"/>
+                <outlet property="playPauseButton" destination="w0V-8W-MaB" id="kb6-wW-nAS"/>
+                <outlet property="progressView" destination="RnL-k7-BfN" id="tIg-VB-JfH"/>
+                <outlet property="rewindButton" destination="EEq-gu-BlN" id="Pf1-07-Qvs"/>
+                <outlet property="seekbarSlider" destination="rp4-6I-ziU" id="XCC-4O-Nwj"/>
+                <outlet property="skipBackwardButton" destination="35o-71-s5f" id="6ji-8r-Ib7"/>
+                <outlet property="skipForwardButton" destination="RIq-fV-dbp" id="0Kz-Kz-Cp2"/>
+                <outlet property="titleLabel" destination="Zk3-x9-ugw" id="YQ0-zl-8fS"/>
+                <outlet property="totalTimeLabel" destination="qCo-1e-Z0Z" id="eVh-3G-eq8"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="154.27286356821591"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CT_fastforward" width="96" height="96"/>
+        <image name="CT_fullscreen" width="36" height="36"/>
+        <image name="CT_fullscreen_disable" width="36" height="36"/>
+        <image name="CT_pause" width="96" height="96"/>
+        <image name="CT_play" width="96" height="96"/>
+        <image name="CT_playhead" width="48" height="48"/>
+        <image name="CT_rewind" width="96" height="96"/>
+        <image name="CT_skipBackward" width="96" height="96"/>
+        <image name="CT_skipForward" width="96" height="96"/>
+        <image name="CT_sound-off" width="36" height="36"/>
+        <image name="CT_sound-on" width="36" height="36"/>
+    </resources>
+</document>

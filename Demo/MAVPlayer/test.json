@@ -1,0 +1,60 @@
+{
+	"numFound": 1,
+	"start": 0,
+	"docs": [
+		{
+			"obj_realm": "ONEMCP1",
+			"obj_type": "video",
+			"obj_id": "10014056",
+			"c_title_s": "《沈春華 LIFE SHOW》再受傷也要活出自我－梁詠琪",
+			"c_description_s": "梁詠琪的感情世界",
+			"c_tag_smv": [
+				"沈春華",
+				"梁詠琪",
+				"沈春華 LIFE SHOW"
+			],
+			"c_source_id_l": 10000034,
+			"c_category_smv": [
+				"10000050"
+			],
+			"c_language_s": "zh",
+			"c_program_id_l": 10000186,
+			"c_season_id_l": 10000157,
+			"c_episode_id_l": 10000661,
+			"c_ts_publish_l": 1549938120,
+			"c_season_s": "1",
+			"c_episode_l": 1,
+			"info": {
+				"duration": "2693",
+				"program_name": "CTI-Program",
+				"categories": [
+					{
+						"id": "10000050",
+						"name": "Entertainment"
+					}
+				],
+				"ads": {
+					"flags": [
+						"1",
+						"1",
+						"0"
+					],
+					"breaks": [ ]
+				}
+			},
+			"media_url": "https://tkx.apis.anvato.net/rest/v2/mcp/video/10014056?anvack=4eBjrEPvIlaqxefJYWmNI5gxBlTKXr8x&eud=hhFzPiGOH6SR9LPWwmrydVg2jeXFFzpsYskKaAh41MyW0KMQjsim%2BQWT7myiQxpBTyO8KsbFw40vgX8hrw%2Bxqw%3D%3D",
+			"thumbnails": [
+				{
+					"type": "image/jpeg",
+					"url": "https://lwgrb6krlfzmyv3n34v3yx7rud.gcdn.anvato.net/pvw/09B/8F1/09B8F14332B74E3A8C027A95F07CDDCF.jpg?Expires=1645695779&KeyName=mcpkey1&Signature=APBjGe2OQh95kr6Ri5VcnO5-Luo",
+					"role": "poster",
+					"width": 1920,
+					"height": 1080
+				}
+			]
+		}
+	],
+	"defaults": {
+		"timezone": "Asia/Taipei"
+	}
+}
