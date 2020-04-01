@@ -75,6 +75,7 @@
 		D723B95521241B6C009879CE /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D723B95421241B6C009879CE /* AttributedString.swift */; };
 		D723B958212572C8009879CE /* TableViewAdvanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = D723B957212572C8009879CE /* TableViewAdvanced.swift */; };
 		D723B95B2125ADA4009879CE /* Banners.swift in Sources */ = {isa = PBXBuildFile; fileRef = D723B95A2125ADA4009879CE /* Banners.swift */; };
+		D735C0DE24347081002CCA0C /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D735C0DD24347081002CCA0C /* awsconfiguration.json */; };
 		D74EF0F8222519A8004A0F27 /* AnvatoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF0F7222519A8004A0F27 /* AnvatoData.swift */; };
 		D74EF0FC22252683004A0F27 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = D74EF0FB22252683004A0F27 /* test.json */; };
 		D74EF39B224080CF004A0F27 /* CTPlayerPlaybackError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF376224080CE004A0F27 /* CTPlayerPlaybackError.swift */; };
@@ -296,6 +297,7 @@
 		D723B95421241B6C009879CE /* AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedString.swift; sourceTree = "<group>"; };
 		D723B957212572C8009879CE /* TableViewAdvanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdvanced.swift; sourceTree = "<group>"; };
 		D723B95A2125ADA4009879CE /* Banners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banners.swift; sourceTree = "<group>"; };
+		D735C0DD24347081002CCA0C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../../../../Desktop/chinatimes/newchinatimes/Manager/awsconfiguration.json; sourceTree = "<group>"; };
 		D74EF0F7222519A8004A0F27 /* AnvatoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnvatoData.swift; sourceTree = "<group>"; };
 		D74EF0FB22252683004A0F27 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		D74EF376224080CE004A0F27 /* CTPlayerPlaybackError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPlayerPlaybackError.swift; sourceTree = "<group>"; };
@@ -1176,6 +1178,7 @@
 			isa = PBXGroup;
 			children = (
 				D7ECD57C239E4DD9000C8FB0 /* SpeechSynthesizer.swift */,
+				D735C0DD24347081002CCA0C /* awsconfiguration.json */,
 			);
 			path = SpeechSynthesizer;
 			sourceTree = "<group>";
@@ -1576,6 +1579,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D735C0DE24347081002CCA0C /* awsconfiguration.json in Resources */,
 				D79BE53D239A068C0042A401 /* Tutor.xcassets in Resources */,
 				D70BE353233CA4720001109C /* themartian.jpg in Resources */,
 				D70BE33A233B50A90001109C /* ValuePickerCell.xib in Resources */,
@@ -1679,6 +1683,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSPolly/AWSPolly.framework",
 				"${BUILT_PRODUCTS_DIR}/BTNavigationDropdownMenu/BTNavigationDropdownMenu.framework",
 				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
@@ -1689,6 +1699,12 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPolly.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BTNavigationDropdownMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bB9-dB-fm0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bB9-dB-fm0">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -4490,6 +4490,16 @@
                                     <action selector="togglePlay:" destination="gpq-DZ-urN" eventType="touchUpInside" id="CES-oa-YZQ"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yH5-A3-sqa">
+                                <rect key="frame" x="105" y="465.5" width="165" height="32"/>
+                                <segments>
+                                    <segment title="AVSpeech"/>
+                                    <segment title="AWSPolly"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeSpeech:" destination="gpq-DZ-urN" eventType="valueChanged" id="nS6-2M-ipL"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -4497,10 +4507,12 @@
                             <constraint firstItem="O74-5J-c7W" firstAttribute="height" secondItem="qyc-5x-jb5" secondAttribute="height" multiplier="0.5" id="5Qr-IZ-Oi6"/>
                             <constraint firstItem="V2Q-6q-4cr" firstAttribute="top" secondItem="c31-C2-dXo" secondAttribute="top" constant="20" id="HXD-cX-iOF"/>
                             <constraint firstItem="V2Q-6q-4cr" firstAttribute="leading" secondItem="c31-C2-dXo" secondAttribute="leading" constant="16" id="QVW-eW-IsO"/>
+                            <constraint firstItem="yH5-A3-sqa" firstAttribute="top" secondItem="XuM-xs-Ehv" secondAttribute="bottom" constant="20" id="aT2-Jh-Rbo"/>
                             <constraint firstItem="c31-C2-dXo" firstAttribute="trailing" secondItem="O74-5J-c7W" secondAttribute="trailing" constant="16" id="ihh-pD-q1m"/>
                             <constraint firstItem="XuM-xs-Ehv" firstAttribute="centerX" secondItem="qyc-5x-jb5" secondAttribute="centerX" id="jc8-iT-ds4"/>
                             <constraint firstItem="c31-C2-dXo" firstAttribute="trailing" secondItem="V2Q-6q-4cr" secondAttribute="trailing" constant="16" id="peQ-sV-87u"/>
                             <constraint firstItem="O74-5J-c7W" firstAttribute="leading" secondItem="c31-C2-dXo" secondAttribute="leading" constant="16" id="pqg-uC-47g"/>
+                            <constraint firstItem="yH5-A3-sqa" firstAttribute="centerX" secondItem="qyc-5x-jb5" secondAttribute="centerX" id="xL1-gg-6na"/>
                             <constraint firstItem="XuM-xs-Ehv" firstAttribute="top" secondItem="O74-5J-c7W" secondAttribute="bottom" constant="16" id="yU0-eg-5hU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c31-C2-dXo"/>
@@ -4508,6 +4520,7 @@
                     <connections>
                         <outlet property="inputTextField" destination="V2Q-6q-4cr" id="s4f-6B-qsA"/>
                         <outlet property="playButton" destination="XuM-xs-Ehv" id="DcV-xs-gl4"/>
+                        <outlet property="selectSpeech" destination="yH5-A3-sqa" id="lfo-eY-Tj3"/>
                         <outlet property="textLabel" destination="O74-5J-c7W" id="xv2-h4-7GJ"/>
                     </connections>
                 </viewController>
@@ -4958,6 +4971,10 @@
             <point key="canvasLocation" x="-575" y="47542"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="nso-jg-iKx"/>
+        <segue reference="Zhv-gg-egZ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="0" width="1536" height="2048"/>
         <image name="1" width="1536" height="2048"/>
@@ -4969,10 +4986,6 @@
         <image name="Title" width="255" height="34"/>
         <image name="UserImageSample" width="100" height="100"/>
         <image name="face-1" width="750" height="1093"/>
-        <image name="play" catalog="system" width="60" height="64"/>
+        <image name="play" catalog="system" width="120" height="128"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="nso-jg-iKx"/>
-        <segue reference="Zhv-gg-egZ"/>
-    </inferredMetricsTieBreakers>
 </document>

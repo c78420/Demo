@@ -8,6 +8,8 @@
 
 import UIKit
 import UserNotifications
+import AWSCore
+import AWSMobileClient
 
 // Swift 自動生成 main
 //@UIApplicationMain
@@ -28,6 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 代理 UNUserNotificationCenterDelegate，這麼做可讓 App 在前景狀態下收到通知
         UNUserNotificationCenter.current().delegate = self
+        
+        AWSMobileClient.sharedInstance().initialize { (userState, error) in
+            guard error == nil else {
+                print("AWSMobileClient initialization failed. Error: \(error!.localizedDescription)")
+                return
+            }
+            print("AWSMobileClient initialized.")
+        }
         
         return true
     }

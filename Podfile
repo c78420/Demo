@@ -15,6 +15,9 @@ target 'Demo' do
   pod "Kingfisher"
   pod 'NetStatus', :git => 'https://github.com/c78420/NetStatus.git'
   pod 'lottie-ios'
+  #AWSPolly
+  pod 'AWSMobileClient'
+  pod 'AWSPolly'
 
   target 'DemoTests' do
     inherit! :search_paths
