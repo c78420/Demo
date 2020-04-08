@@ -75,7 +75,8 @@
 		D723B95521241B6C009879CE /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D723B95421241B6C009879CE /* AttributedString.swift */; };
 		D723B958212572C8009879CE /* TableViewAdvanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = D723B957212572C8009879CE /* TableViewAdvanced.swift */; };
 		D723B95B2125ADA4009879CE /* Banners.swift in Sources */ = {isa = PBXBuildFile; fileRef = D723B95A2125ADA4009879CE /* Banners.swift */; };
-		D735C0DE24347081002CCA0C /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D735C0DD24347081002CCA0C /* awsconfiguration.json */; };
+		D735C0E1243ADCDF002CCA0C /* DiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D735C0E0243ADCDF002CCA0C /* DiffableDataSource.swift */; };
+		D735C0E5243AFECE002CCA0C /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D735C0E4243AFECE002CCA0C /* awsconfiguration.json */; };
 		D74EF0F8222519A8004A0F27 /* AnvatoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF0F7222519A8004A0F27 /* AnvatoData.swift */; };
 		D74EF0FC22252683004A0F27 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = D74EF0FB22252683004A0F27 /* test.json */; };
 		D74EF39B224080CF004A0F27 /* CTPlayerPlaybackError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74EF376224080CE004A0F27 /* CTPlayerPlaybackError.swift */; };
@@ -297,7 +298,8 @@
 		D723B95421241B6C009879CE /* AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedString.swift; sourceTree = "<group>"; };
 		D723B957212572C8009879CE /* TableViewAdvanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdvanced.swift; sourceTree = "<group>"; };
 		D723B95A2125ADA4009879CE /* Banners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banners.swift; sourceTree = "<group>"; };
-		D735C0DD24347081002CCA0C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../../../../Desktop/chinatimes/newchinatimes/Manager/awsconfiguration.json; sourceTree = "<group>"; };
+		D735C0E0243ADCDF002CCA0C /* DiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSource.swift; sourceTree = "<group>"; };
+		D735C0E4243AFECE002CCA0C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		D74EF0F7222519A8004A0F27 /* AnvatoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnvatoData.swift; sourceTree = "<group>"; };
 		D74EF0FB22252683004A0F27 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		D74EF376224080CE004A0F27 /* CTPlayerPlaybackError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPlayerPlaybackError.swift; sourceTree = "<group>"; };
@@ -781,6 +783,14 @@
 			path = Banners;
 			sourceTree = "<group>";
 		};
+		D735C0DF243ADCC1002CCA0C /* DiffableDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				D735C0E0243ADCDF002CCA0C /* DiffableDataSource.swift */,
+			);
+			path = DiffableDataSource;
+			sourceTree = "<group>";
+		};
 		D74EF373224080CE004A0F27 /* CTPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1178,7 +1188,7 @@
 			isa = PBXGroup;
 			children = (
 				D7ECD57C239E4DD9000C8FB0 /* SpeechSynthesizer.swift */,
-				D735C0DD24347081002CCA0C /* awsconfiguration.json */,
+				D735C0E4243AFECE002CCA0C /* awsconfiguration.json */,
 			);
 			path = SpeechSynthesizer;
 			sourceTree = "<group>";
@@ -1344,6 +1354,7 @@
 				D7DFB86623AB5812007676BF /* GesturePassword */,
 				D7DFB86B23AC5F2B007676BF /* iBeacon */,
 				D7DFB86E23B06F43007676BF /* AssistiveTouch */,
+				D735C0DF243ADCC1002CCA0C /* DiffableDataSource */,
 				EA8224E620B27219008BD094 /* Main.storyboard */,
 				D7826B2121D5132A00337881 /* Localizable.strings */,
 				D7826B2321D5134A00337881 /* test1_Localizable.strings */,
@@ -1579,7 +1590,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D735C0DE24347081002CCA0C /* awsconfiguration.json in Resources */,
+				D735C0E5243AFECE002CCA0C /* awsconfiguration.json in Resources */,
 				D79BE53D239A068C0042A401 /* Tutor.xcassets in Resources */,
 				D70BE353233CA4720001109C /* themartian.jpg in Resources */,
 				D70BE33A233B50A90001109C /* ValuePickerCell.xib in Resources */,
@@ -1886,6 +1897,7 @@
 				D74EF3B1224080CF004A0F27 /* CTSeekbarSlider.swift in Sources */,
 				D7DFB84923A336A2007676BF /* MDVTabBarItemable.swift in Sources */,
 				EA12DF9020C12CE8003BE9DD /* CollectionViewAutosizing.swift in Sources */,
+				D735C0E1243ADCDF002CCA0C /* DiffableDataSource.swift in Sources */,
 				D700A8AE23866916006A88E2 /* ShapeFactory.swift in Sources */,
 				D794A169210EF94400DCDFB1 /* RandomUser.swift in Sources */,
 				D70BE36F2346D9350001109C /* City.swift in Sources */,

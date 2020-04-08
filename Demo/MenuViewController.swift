@@ -78,6 +78,7 @@ enum MenuData: String, CaseIterable {
     case GesturePassword
     case iBeacon
     case AssistiveTouch
+    case DiffableDataSource
 }
 
 private let reuseIdentifier = "reuseCell"
