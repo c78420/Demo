@@ -9,10 +9,10 @@
 import UIKit
 import GameKit
 
-let MAX_NUMBER = 100
-let MIN_NUMBER = 1
-
 class NumberLock: UIViewController {
+    let MAX_NUMBER = 100
+    let MIN_NUMBER = 1
+    
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var backgroung: UIImageView!

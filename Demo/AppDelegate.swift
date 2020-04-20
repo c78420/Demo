@@ -10,6 +10,9 @@ import UIKit
 import UserNotifications
 import AWSCore
 import AWSMobileClient
+import Firebase
+import GoogleSignIn
+import FBSDKCoreKit
 
 // Swift 自動生成 main
 //@UIApplicationMain
@@ -38,6 +41,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             print("AWSMobileClient initialized.")
         }
+        
+        FirebaseApp.configure()
+        
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
+        
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        UIApplication.shared.applicationIconBadgeNumber = 0
         
         return true
     }
@@ -105,6 +117,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return .portrait
         }
     }
+    
+    @available(iOS 9.0, *)
+    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+        
+        let isGIDSignInHandle = GIDSignIn.sharedInstance().handle(url)
+        if isGIDSignInHandle {
+            return true
+        }
+        
+        let isFBSignInHandle = ApplicationDelegate.shared.application(application, open: url, options: options)
+        if isFBSignInHandle {
+            return true
+        }
+
+        return false
+    }
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
@@ -123,6 +151,35 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         // 取出userInfo的link並開啟Facebook
         let requestUrl = URL(string: content.userInfo["link"]! as! String)
         UIApplication.shared.open(requestUrl!, options: [:], completionHandler: nil)
+    }
+}
+
+extension AppDelegate: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        // ...
+        if let error = error {
+            print(error)
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+        Auth.auth().signIn(with: credential) { (authResult, error) in
+            if let error = error {
+                print(error)
+                
+                return
+            }
+            // User is signed in
+            print("=====> SignInWithGoogle success")
+            print("=====> profile: \(authResult?.additionalUserInfo?.profile)")
+        }
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+        // ...
     }
 }
 

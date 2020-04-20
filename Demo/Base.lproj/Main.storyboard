@@ -4985,6 +4985,72 @@
             </objects>
             <point key="canvasLocation" x="-575" y="48234"/>
         </scene>
+        <!--Sign In-->
+        <scene sceneID="XeJ-Dc-bbb">
+            <objects>
+                <viewController storyboardIdentifier="SignIn" id="Tds-el-Qf1" customClass="SignIn" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ITC-RS-JCq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DGY-G5-BlU">
+                                <rect key="frame" x="20" y="20" width="335" height="240"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rr1-6i-Ld7">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Plc-vl-3vj"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3F-iy-nlP" customClass="GIDSignInButton">
+                                        <rect key="frame" x="0.0" y="60" width="335" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="r77-TC-Wk3"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="signInButtonClick:" destination="Tds-el-Qf1" eventType="valueChanged" id="7Mu-1c-dU3"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Kv-ZO-Vzw">
+                                        <rect key="frame" x="0.0" y="120" width="335" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="0UD-7O-MuJ"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpS-Ae-oXb">
+                                        <rect key="frame" x="0.0" y="180" width="335" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="3v6-sR-oQw"/>
+                                        </constraints>
+                                        <state key="normal" title="Sign in with Facebook"/>
+                                        <connections>
+                                            <action selector="signInFBClick:" destination="Tds-el-Qf1" eventType="touchUpInside" id="Z8K-p5-2ks"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Fcj-AV-I5L" firstAttribute="trailing" secondItem="DGY-G5-BlU" secondAttribute="trailing" constant="20" id="A9p-II-gGJ"/>
+                            <constraint firstItem="DGY-G5-BlU" firstAttribute="leading" secondItem="Fcj-AV-I5L" secondAttribute="leading" constant="20" id="Z0l-KV-Is7"/>
+                            <constraint firstItem="DGY-G5-BlU" firstAttribute="top" secondItem="Fcj-AV-I5L" secondAttribute="top" constant="20" id="vxo-ov-38v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fcj-AV-I5L"/>
+                    </view>
+                    <connections>
+                        <outlet property="signInButton" destination="c3F-iy-nlP" id="EcE-Cw-l7o"/>
+                        <outlet property="signInFBButton" destination="6Kv-ZO-Vzw" id="nKg-6N-mmd"/>
+                        <outlet property="signInWithAppleButtonView" destination="rr1-6i-Ld7" id="78F-qA-NXL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UvL-sj-TDL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-575" y="48917"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="nso-jg-iKx"/>

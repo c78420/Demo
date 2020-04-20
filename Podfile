@@ -15,6 +15,10 @@ target 'Demo' do
   pod "Kingfisher"
   pod 'NetStatus', :git => 'https://github.com/c78420/NetStatus.git'
   pod 'lottie-ios'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
+  pod 'FBSDKLoginKit'
   #AWSPolly
   pod 'AWSMobileClient'
   pod 'AWSPolly'

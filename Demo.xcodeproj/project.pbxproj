@@ -170,6 +170,9 @@
 		D7DFB86D23AC5F39007676BF /* iBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DFB86C23AC5F39007676BF /* iBeacon.swift */; };
 		D7DFB87023B06F57007676BF /* AssistiveTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DFB86F23B06F57007676BF /* AssistiveTouch.swift */; };
 		D7DFB87223B07087007676BF /* CustomUIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DFB87123B07087007676BF /* CustomUIWindow.swift */; };
+		D7E6FABA2444160C0013A0E5 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E6FAB92444160C0013A0E5 /* SignIn.swift */; };
+		D7E6FABC24455FF90013A0E5 /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E6FABB24455FF90013A0E5 /* SignInWithApple.swift */; };
+		D7E6FABE244839390013A0E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7E6FABD244839390013A0E5 /* GoogleService-Info.plist */; };
 		D7ECD57A239DF406000C8FB0 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ECD579239DF406000C8FB0 /* Form.swift */; };
 		D7ECD57D239E4DD9000C8FB0 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ECD57C239E4DD9000C8FB0 /* SpeechSynthesizer.swift */; };
 		D7ECD580239F905D000C8FB0 /* Graphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ECD57F239F905D000C8FB0 /* Graphics.swift */; };
@@ -393,6 +396,9 @@
 		D7DFB86C23AC5F39007676BF /* iBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBeacon.swift; sourceTree = "<group>"; };
 		D7DFB86F23B06F57007676BF /* AssistiveTouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistiveTouch.swift; sourceTree = "<group>"; };
 		D7DFB87123B07087007676BF /* CustomUIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIWindow.swift; sourceTree = "<group>"; };
+		D7E6FAB92444160C0013A0E5 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		D7E6FABB24455FF90013A0E5 /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithApple.swift; sourceTree = "<group>"; };
+		D7E6FABD244839390013A0E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D7ECD579239DF406000C8FB0 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		D7ECD57C239E4DD9000C8FB0 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		D7ECD57F239F905D000C8FB0 /* Graphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graphics.swift; sourceTree = "<group>"; };
@@ -1184,6 +1190,15 @@
 			path = AssistiveTouch;
 			sourceTree = "<group>";
 		};
+		D7E6FAB8244415DD0013A0E5 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				D7E6FAB92444160C0013A0E5 /* SignIn.swift */,
+				D7E6FABB24455FF90013A0E5 /* SignInWithApple.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		D7ECD57B239E4DBF000C8FB0 /* SpeechSynthesizer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1281,6 +1296,7 @@
 			isa = PBXGroup;
 			children = (
 				EA55068820CA57A100021F0E /* Demo.entitlements */,
+				D7E6FABD244839390013A0E5 /* GoogleService-Info.plist */,
 				EA8224E220B27219008BD094 /* AppDelegate.swift */,
 				EA82251020B2734B008BD094 /* MenuViewController.swift */,
 				D794A171211008A800DCDFB1 /* APIManager */,
@@ -1355,6 +1371,7 @@
 				D7DFB86B23AC5F2B007676BF /* iBeacon */,
 				D7DFB86E23B06F43007676BF /* AssistiveTouch */,
 				D735C0DF243ADCC1002CCA0C /* DiffableDataSource */,
+				D7E6FAB8244415DD0013A0E5 /* SignIn */,
 				EA8224E620B27219008BD094 /* Main.storyboard */,
 				D7826B2121D5132A00337881 /* Localizable.strings */,
 				D7826B2321D5134A00337881 /* test1_Localizable.strings */,
@@ -1486,6 +1503,7 @@
 				EA8224DC20B27219008BD094 /* Frameworks */,
 				EA8224DD20B27219008BD094 /* Resources */,
 				B419362E250397AE935F0A18 /* [CP] Embed Pods Frameworks */,
+				7BAB4C6769B9B692A8895B8C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1629,6 +1647,7 @@
 				D70BE33F233B53FD0001109C /* CellDescriptor.plist in Resources */,
 				D70BE351233CA4720001109C /* pixels.jpg in Resources */,
 				EAE0B0A420B28124007EEAD6 /* countries.txt in Resources */,
+				D7E6FABE244839390013A0E5 /* GoogleService-Info.plist in Resources */,
 				D70BE352233CA4720001109C /* MoviesData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1669,6 +1688,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7BAB4C6769B9B692A8895B8C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A52CE6EA849914BCE2A8155C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1700,13 +1737,21 @@
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSPolly/AWSPolly.framework",
+				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/BTNavigationDropdownMenu/BTNavigationDropdownMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/NetStatus/NetStatus.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
 				"${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1716,13 +1761,21 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPolly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BTNavigationDropdownMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NetStatus.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1761,6 +1814,7 @@
 				D77FA2F823331DC000BE059B /* PopViewController.swift in Sources */,
 				EAE0B0A020B28003007EEAD6 /* PullRefresh.swift in Sources */,
 				D70BE341233B629D0001109C /* CustomCell.swift in Sources */,
+				D7E6FABA2444160C0013A0E5 /* SignIn.swift in Sources */,
 				D700A91B2398DA18006A88E2 /* SwiftUIVC.swift in Sources */,
 				D7BB3D862282686D00E80D05 /* SideMenuTabBar.swift in Sources */,
 				D7ECD582239F90E6000C8FB0 /* PushButton.swift in Sources */,
@@ -1795,6 +1849,7 @@
 				D74EF0F8222519A8004A0F27 /* AnvatoData.swift in Sources */,
 				D74EF3A4224080CF004A0F27 /* IMAControls.swift in Sources */,
 				D7ECD57A239DF406000C8FB0 /* Form.swift in Sources */,
+				D7E6FABC24455FF90013A0E5 /* SignInWithApple.swift in Sources */,
 				D723B94D2122E66C009879CE /* SecondViewController.swift in Sources */,
 				D77FA2F22333176A00BE059B /* Popover.swift in Sources */,
 				D74EF3B3224080CF004A0F27 /* CTTimeLabel.swift in Sources */,
