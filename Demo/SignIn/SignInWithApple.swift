@@ -89,6 +89,16 @@ class SignInWithApple: NSObject {
         }
     }
     
+    func performExistingAccountSetupFlows() {
+        let requests = [ASAuthorizationAppleIDProvider().createRequest(),
+                       ASAuthorizationPasswordProvider().createRequest()]
+        
+        let controller = ASAuthorizationController(authorizationRequests: requests)
+        controller.delegate = self
+        controller.presentationContextProvider = self
+        controller.performRequests()
+    }
+    
     private func getCredentialState(withUserID userID: String, completion: @escaping (ASAuthorizationAppleIDProvider.CredentialState, Error?) -> Void) {
         let provider = ASAuthorizationAppleIDProvider()
         provider.getCredentialState(forUserID: userID, completion: completion)

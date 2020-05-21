@@ -125,6 +125,12 @@
 		D7800AE5244FEA5400A5F418 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7800AE4244FEA5400A5F418 /* ViewModel.swift */; };
 		D7800AE7244FEAD100A5F418 /* Messier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7800AE6244FEAD100A5F418 /* Messier.swift */; };
 		D7800AE9244FEE6100A5F418 /* MessierDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7800AE8244FEE6100A5F418 /* MessierDetail.swift */; };
+		D7800AEB245040C200A5F418 /* MVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7800AEA245040C200A5F418 /* MVP.swift */; };
+		D7800AEE245040F700A5F418 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7800AED245040F700A5F418 /* Presenter.swift */; };
+		D7800AF1245E855200A5F418 /* StarTrail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7800AF0245E855200A5F418 /* StarTrail.swift */; };
+		D7800AF5247263D000A5F418 /* SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7800AF4247263D000A5F418 /* SVG.swift */; };
+		D7800AFA2476109F00A5F418 /* swipe_left.svg in Resources */ = {isa = PBXBuildFile; fileRef = D7800AF82476109F00A5F418 /* swipe_left.svg */; };
+		D7800AFB2476109F00A5F418 /* swipe_right.svg in Resources */ = {isa = PBXBuildFile; fileRef = D7800AF92476109F00A5F418 /* swipe_right.svg */; };
 		D7826B1C21D509FC00337881 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7826B1B21D509FC00337881 /* Localization.swift */; };
 		D7826B1E21D50DAE00337881 /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7826B1D21D50DAE00337881 /* Localize.swift */; };
 		D7826B2221D5132A00337881 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7826B2121D5132A00337881 /* Localizable.strings */; };
@@ -364,6 +370,12 @@
 		D7800AE4244FEA5400A5F418 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		D7800AE6244FEAD100A5F418 /* Messier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messier.swift; sourceTree = "<group>"; };
 		D7800AE8244FEE6100A5F418 /* MessierDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessierDetail.swift; sourceTree = "<group>"; };
+		D7800AEA245040C200A5F418 /* MVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP.swift; sourceTree = "<group>"; };
+		D7800AED245040F700A5F418 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		D7800AF0245E855200A5F418 /* StarTrail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarTrail.swift; sourceTree = "<group>"; };
+		D7800AF4247263D000A5F418 /* SVG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVG.swift; sourceTree = "<group>"; };
+		D7800AF82476109F00A5F418 /* swipe_left.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = swipe_left.svg; sourceTree = "<group>"; };
+		D7800AF92476109F00A5F418 /* swipe_right.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = swipe_right.svg; sourceTree = "<group>"; };
 		D7826B1B21D509FC00337881 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		D7826B1D21D50DAE00337881 /* Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
 		D7826B2121D5132A00337881 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -1034,9 +1046,11 @@
 				D7800ACD244EE69500A5F418 /* Service */,
 				D7800ACC244EE68700A5F418 /* Model */,
 				D7800AD4244EE96500A5F418 /* View */,
+				D7800AEC245040DC00A5F418 /* Presenter */,
 				D7800AD9244EEFF000A5F418 /* ViewModel */,
 				D7E6FAC3244ED7670013A0E5 /* MVC.swift */,
 				D7E6FAC5244ED7820013A0E5 /* MVVM.swift */,
+				D7800AEA245040C200A5F418 /* MVP.swift */,
 				D7800ACA244EDB1D00A5F418 /* DetailViewController.swift */,
 			);
 			path = MVVM1;
@@ -1075,6 +1089,32 @@
 				D7800AE8244FEE6100A5F418 /* MessierDetail.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D7800AEC245040DC00A5F418 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D7800AED245040F700A5F418 /* Presenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D7800AEF245E853400A5F418 /* StarTrail */ = {
+			isa = PBXGroup;
+			children = (
+				D7800AF0245E855200A5F418 /* StarTrail.swift */,
+			);
+			path = StarTrail;
+			sourceTree = "<group>";
+		};
+		D7800AF32472637F00A5F418 /* SVG */ = {
+			isa = PBXGroup;
+			children = (
+				D7800AF4247263D000A5F418 /* SVG.swift */,
+				D7800AF82476109F00A5F418 /* swipe_left.svg */,
+				D7800AF92476109F00A5F418 /* swipe_right.svg */,
+			);
+			path = SVG;
 			sourceTree = "<group>";
 		};
 		D7826B1A21D509D600337881 /* Localization */ = {
@@ -1491,6 +1531,8 @@
 				D735C0DF243ADCC1002CCA0C /* DiffableDataSource */,
 				D7E6FAB8244415DD0013A0E5 /* SignIn */,
 				D7E6FAC2244ED6C40013A0E5 /* SoftwareArchitecture */,
+				D7800AEF245E853400A5F418 /* StarTrail */,
+				D7800AF32472637F00A5F418 /* SVG */,
 				EA8224E620B27219008BD094 /* Main.storyboard */,
 				D7826B2121D5132A00337881 /* Localizable.strings */,
 				D7826B2321D5134A00337881 /* test1_Localizable.strings */,
@@ -1735,6 +1777,7 @@
 				D74EF39D224080CF004A0F27 /* CTLandscape.storyboard in Resources */,
 				EA8224ED20B27219008BD094 /* LaunchScreen.storyboard in Resources */,
 				D70BE33D233B50A90001109C /* SliderCell.xib in Resources */,
+				D7800AFB2476109F00A5F418 /* swipe_right.svg in Resources */,
 				D70BE3712346DB940001109C /* CityCollectionViewCell.xib in Resources */,
 				EAB6DD2E20CA84230050FE81 /* AutosizingCell.xib in Resources */,
 				D74EF0FC22252683004A0F27 /* test.json in Resources */,
@@ -1745,6 +1788,7 @@
 				D700A8C1238E530F006A88E2 /* InfoCell.xib in Resources */,
 				D70BE354233CA4720001109C /* terminatorgenisys.jpg in Resources */,
 				D70BE339233B50A90001109C /* TextfieldCell.xib in Resources */,
+				D7800AFA2476109F00A5F418 /* swipe_left.svg in Resources */,
 				D77FA2F923331DC000BE059B /* PopViewController.xib in Resources */,
 				D700A8F22398AEAD006A88E2 /* 159-servishero-loading.json in Resources */,
 				D7826B2221D5132A00337881 /* Localizable.strings in Resources */,
@@ -1936,6 +1980,7 @@
 				EAE0B0A020B28003007EEAD6 /* PullRefresh.swift in Sources */,
 				D70BE341233B629D0001109C /* CustomCell.swift in Sources */,
 				D7E6FABA2444160C0013A0E5 /* SignIn.swift in Sources */,
+				D7800AF5247263D000A5F418 /* SVG.swift in Sources */,
 				D700A91B2398DA18006A88E2 /* SwiftUIVC.swift in Sources */,
 				D7800AE9244FEE6100A5F418 /* MessierDetail.swift in Sources */,
 				D7BB3D862282686D00E80D05 /* SideMenuTabBar.swift in Sources */,
@@ -1943,6 +1988,7 @@
 				D7ECD58423A0A1AD000C8FB0 /* CounterView.swift in Sources */,
 				D70BE36D2346D92D0001109C /* CityCollectionViewFlowLayout.swift in Sources */,
 				D7BB3D8C2282872700E80D05 /* SliderManager.swift in Sources */,
+				D7800AF1245E855200A5F418 /* StarTrail.swift in Sources */,
 				D74EF3AE224080CF004A0F27 /* CTPlayerControlsBehaviour.swift in Sources */,
 				D74EF39C224080CF004A0F27 /* CTPlayerRenderingView.swift in Sources */,
 				D7CD28E9233087F1006DC152 /* Draw.swift in Sources */,
@@ -1982,6 +2028,7 @@
 				D723B94521228C88009879CE /* Calendar.swift in Sources */,
 				EA84922120D0FFE5003AF6AF /* ColorFinder.swift in Sources */,
 				D700A8B123867C49006A88E2 /* ObserverDesignPattern.swift in Sources */,
+				D7800AEB245040C200A5F418 /* MVP.swift in Sources */,
 				D7DFB86A23AB6136007676BF /* GestureCollectionView.swift in Sources */,
 				D723B9482122E045009879CE /* DropDownMenu.swift in Sources */,
 				D74EF3AD224080CF004A0F27 /* CTPlayerGestureRecieverViewDelegate.swift in Sources */,
@@ -2085,6 +2132,7 @@
 				D7DFB84923A336A2007676BF /* MDVTabBarItemable.swift in Sources */,
 				EA12DF9020C12CE8003BE9DD /* CollectionViewAutosizing.swift in Sources */,
 				D735C0E1243ADCDF002CCA0C /* DiffableDataSource.swift in Sources */,
+				D7800AEE245040F700A5F418 /* Presenter.swift in Sources */,
 				D700A8AE23866916006A88E2 /* ShapeFactory.swift in Sources */,
 				D794A169210EF94400DCDFB1 /* RandomUser.swift in Sources */,
 				D70BE36F2346D9350001109C /* City.swift in Sources */,

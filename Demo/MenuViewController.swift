@@ -81,6 +81,8 @@ enum MenuData: String, CaseIterable {
     case DiffableDataSource
     case SignIn
     case SoftwareArchitecture
+    case StarTrail
+    case SVG
 }
 
 private let reuseIdentifier = "reuseCell"
