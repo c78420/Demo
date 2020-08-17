@@ -127,21 +127,28 @@ extension SignInWithApple: ASAuthorizationControllerDelegate {
             return
         }
         
+        print("token \(String(describing: credential.identityToken))")
+        print("token \(String(describing: credential.authorizationCode))")
+        
         if !credential.user.isEmpty {
+            print("user \(credential.user)")
             UserDefaults.standard.set(credential.user, forKey: SignInWithAppleCredential.user.key)
         }
         
         if let fullName = credential.fullName {
             if let givenName = fullName.givenName, !givenName.isEmpty {
+                print("user \(fullName)")
                 UserDefaults.standard.set(givenName, forKey: SignInWithAppleCredential.givenName.key)
             }
             
             if let familyName = fullName.familyName, !familyName.isEmpty {
+                print("user \(familyName)")
                 UserDefaults.standard.set(familyName, forKey: SignInWithAppleCredential.givenName.key)
             }
         }
         
         if let email = credential.email, !email.isEmpty {
+            print("user \(email)")
             UserDefaults.standard.set(email, forKey: SignInWithAppleCredential.email.key)
         }
         

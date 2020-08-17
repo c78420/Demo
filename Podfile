@@ -17,6 +17,8 @@ target 'Demo' do
   pod 'lottie-ios'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/DynamicLinks'    
   pod 'GoogleSignIn'
   pod 'FBSDKLoginKit'
   #AWSPolly

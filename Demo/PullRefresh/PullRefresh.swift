@@ -25,6 +25,21 @@ class PullRefresh: UIViewController {
         for tag in 0..<self.customView.subviews.count {
             self.labelsArray.append(self.customView.viewWithTag(tag+1) as! UILabel)
         }
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        let alert = UIAlertController(title: "", message: appDelegate.dynamicLinkString, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        
+        if let dynamicLinkString = appDelegate.dynamicLinkString, !dynamicLinkString.isEmpty {
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        if let pasteData = UIPasteboard.general.string, let url = URL(string: pasteData) {
+            let alert = UIAlertController(title: "", message: "\(url)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "cancle", style: .default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func Start(_ sender: Any) {

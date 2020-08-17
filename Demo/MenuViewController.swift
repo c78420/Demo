@@ -83,6 +83,10 @@ enum MenuData: String, CaseIterable {
     case SoftwareArchitecture
     case StarTrail
     case SVG
+    case ScrollView
+    case IAP
+    case Stopwatch
+    case RippleEffect
 }
 
 private let reuseIdentifier = "reuseCell"

@@ -19,6 +19,8 @@ import FBSDKCoreKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var dynamicLinkString: String?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -81,7 +83,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             viewController.restoreUserActivityState(userActivity)
         }
         
-        return true
+        let handled = DynamicLinks.dynamicLinks().handleUniversalLink(userActivity.webpageURL!) { (dynamiclink, error) in
+            self.dynamicLinkString = "continue userActivity \(dynamiclink?.url?.absoluteString)"
+            print("=====> \(dynamiclink)")
+        }
+        
+        return handled
     }
 
     // 裝置鎖定狀態
@@ -113,9 +120,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if window == CTLandscapeWindow.shared {
             return .landscape
         }
-        else {
-            return .portrait
-        }
+        
+        return .all
     }
     
     @available(iOS 9.0, *)
@@ -128,6 +134,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let isFBSignInHandle = ApplicationDelegate.shared.application(application, open: url, options: options)
         if isFBSignInHandle {
+            return true
+        }
+        
+        if let dynamiclink = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url) {
+            // Handle the deep link. For example, show the deep-linked content or
+            // apply a promotional offer to the user's account.
+            // ...
+            dynamicLinkString = "open url \(dynamiclink.url?.absoluteString)"
+            print("=====> \(dynamiclink)")
             return true
         }
 

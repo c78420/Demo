@@ -1,0 +1,13 @@
+disabled_rules: # 执行时排除掉的规则
+  - colon
+  - comma
+  - control_statement
+  - trailing_whitespace
+  - statement_position
+opt_in_rules: # 一些规则仅仅是可选的
+  - empty_count
+  - missing_docs
+  # 可以通过执行如下指令来查找所有可用的规则:
+  # swiftlint rules
+excluded: # 执行 linting 时忽略的路径。 优先级比 `included` 更高。
+  - Pods

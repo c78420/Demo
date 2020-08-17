@@ -19,7 +19,10 @@ class SVG: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        webView = WKWebView(frame: CGRect(x: 0, y: 0, width: 300, height: 500))
+        webView = WKWebView(frame: CGRect(x: 0, y: 100, width: 400, height: 400))
+        webView.backgroundColor = .black
+        webView.layer.borderColor = UIColor.black.cgColor
+        webView.layer.borderWidth = 1
         bgView.addSubview(webView)
         
         guard let path: String = Bundle.main.path(forResource: "swipe_left", ofType: "svg") else {
